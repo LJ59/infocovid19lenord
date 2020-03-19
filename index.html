@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<title>Info Covid - Le Nord</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="img/favicon-la.png" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Roboto", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+.liens{color:#ffffff;}
+.liens a {text-decoration: none;}
+.liens a:hover {text-decoration: underline;}
+.logofooter {
+  width: 10em;
+  height: 5em;
+  margin: 0 auto;
+  padding: 1em;
+}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold; background-color: #139FC6;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px;">Close Menu</a>
+  <div class="w3-container">
+      <img class="w3-padding-16" src="img/logo_nord-02.svg" alt="logo du departement du Nord">
+</div>
+  <div class="w3-bar-block">
+    <a href="#packages" onclick="w3_close()" class="w3-bar-item" style="color: #ffffff">UTPAS ouvertes</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item" style="color: #ffffff">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-xlarge w3-padding" style="color:#ffffff; background-color: #139FC6;">
+  <a href="javascript:void(0)" class="w3-button w3-margin-right" onclick="w3_open()">☰</a>
+  <span><img class="w3-image logofooter" src="img/logo_nord-02.svg" alt="logo departement du Nord"></span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-xxlarge" style="color: #175D79"><b>Coronavirus - Covid 19</b></h1>
+    <h1 class="w3-xxxlarge" style="color: #cd1719;"><b>Information</b></h1>
+    <hr style="width:50px;border:5px solid #139FC6" class="w3-round">
+    <p>Mis à jour le 18/03/2020</p>
+  </div>
+  
+   
+  <!-- PAckages -->
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge" style="color: #17323F"><b>Liste des UTPAS ouvertes</b></h1>
+    <hr style="width:50px;border:5px solid #139FC6" class="w3-round">
+    <iframe width="100%" height="100%" src="https://livemap.getwemap.com/iframe.php?emmid=12957&token=3GU8S4LI8EBXP87HGQBYBC21Z" frameborder="0" style="max-width:100%" allowfullscreen allowtransparency allow="geolocation; camera; accelerometer; gyroscope; magnetometer; fullscreen"></iframe>
+
+  </div>
+
+
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge" style="color: #17323F"><b>Contact</b></h1>
+    <hr style="width:50px;border:5px solid #139FC6" class="w3-round">
+    <p>les modes de contact de l'UTPAS sont indiquées sur leurs fiches respectives</p>
+    <h2>Poser ses questions… </h2>
+    <p>Une adresse mail est ouverte et à votre entière disposition pour toute question : COVID19@lenord.fr</p>
+    <h2>Une ligne spéciale ASSFAM</h2>
+    <p>Un numéro de téléphone départemental 0800 00 33 55 (numéro vert) et une adresse mail  assfam.covid19@lenord.fr sont à disposition pour répondre aux questions des assistants familiaux.</p>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-container w3-padding-32" style="margin-top:75px;padding-right:58px; background-color: #17323F"><p class="w3-center" style="color:white;"><a href="https://lenord.fr" title="W3.CSS" target="_blank" class="w3-hover-opacity">Département du Nord</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
